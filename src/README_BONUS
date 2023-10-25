@@ -1,0 +1,2 @@
+Pentru implementarea bonusului am folosit un mutex cu ajutorul syncronized astfel incat
+nicio linie sa nu fie citita de mai mult de un singur thread.

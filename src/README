@@ -1,0 +1,18 @@
+TEMA 2 APD - JANTEA DRAGOS-VALENTIN
+
+In implementarea temei am folosit urmatoarele:
+
+Clasa Worker are doi parametrii: origin si orderID si are o metoda de run ce este responsabila
+pentru modificarea fisierului cu produse. Daca un produs din order_products apartine unei comenzi
+din fisierul orders, ii punem shipped la final in order_Products_out.
+
+In clasa Tema2 declar static doua readere si doua writere, folosind ulterior cate unul pentru fiecare
+fisier. Mai apoi creez doua arraylist-uri, iar in primul pun comenzile si in al doilea pun produsele,
+dupa ce impart liniile din fisierul order_products dupa virgula. Impart si fisierul orders dupa virgula
+si daca gasesc o comanda cu 0 produse, trec peste aceasta. In continuare, punem shipped la finalul sirului
+din orderproducts la liniile cu produsele dintr o anumita comanda cu ajutorul clasei worker si apoi punem
+shippedsi la finalul liniilor din orders cand am terminat de pus shipped in order_products pentru respectiva comanda.
+
+In functia main, dupa preluarea argumentelor din linia de comanda, citesc din fisiere cu bufferedreader si pornesc
+threadurile de tip executor service de nivel doi cu un thread pool, dupa care pornesc P threaduri de tip Tema2 ce
+sunt de nivel 1, urmand ca la final sa le dau join acestora.
